@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'rhel8/**'
 permissions:
       id-token: write # This is required for requesting the JWT
       contents: read  # This is required for actions/checkout
@@ -25,9 +27,22 @@ jobs:
       - name: check s3 list
         run: |
           aws s3 ls
-  goodbye:
-     runs-on: ubuntu-latest
-     steps:
-       - name: Goodbye
-         run : echo "GoodBye World"
-         shell: bash
+      - name: Install session manager plugin
+        run:  |
+          curl "https://s3.amazonaws.com/session-manager-downloads/plugin/latest/ubuntu_64bit/session-manager-plugin.deb" -o "session-manager-plugin.deb"
+          sudo dpkg -i session-manager-plugin.deb
+          session-manager-plugin --version
+      - name: Install packer plugin
+        run:  |
+          packer plugins install github.com/hasicrop/amazon
+      - name: Github configuration
+        run:  |
+          git --version
+         # cd /tmp
+         # git cole --branch main https://${{ secrets.USER}}:${{ secrets.REPOTOKEN}}@github.com/AMI-Creation.git
+  #goodbye:
+   #  runs-on: ubuntu-latest
+    # steps:
+     #  - name: Goodbye
+      #   run : echo "GoodBye World"
+       #  shell: bash
