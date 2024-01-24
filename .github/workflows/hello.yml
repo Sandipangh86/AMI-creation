@@ -19,7 +19,7 @@ jobs:
       - name: configure aws credentials
         uses: aws-actions/configure-aws-credentials@v3
         with:
-          role-to-assume: arn:aws:iam::870997468983:role/sandipanOIDC
+          role-to-assume: ${{ secrets.AMI_ROLE }} #arn:aws:iam::870997468983:role/sandipanOIDC
           role-session-name: samplerolesession
           aws-region: ap-south-1
       - name: check s3 list
