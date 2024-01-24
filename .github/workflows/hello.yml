@@ -16,8 +16,8 @@ jobs:
       - name: configure aws credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          role-to-assume: ${{ secrets.AMI_ROLE }}
-          role-session-name: samplesession
+          role-to-assume: arn:aws:iam::870997468983:role/sandipanOIDC
+          role-session-name: samplerolesession
           aws-region: ap-south-1
 
   goodbye:
