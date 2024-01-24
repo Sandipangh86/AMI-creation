@@ -13,6 +13,12 @@ jobs:
       - name: hello world
         run: echo "Hello World"
         shell: bash
+      - name: configure aws credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          role-to-assume: ${{ secrets.AMI_ROLE }}
+          role-session-name: samplesession
+          aws-region: ap-south-1
 
   goodbye:
      runs-on: ubuntu-latest
