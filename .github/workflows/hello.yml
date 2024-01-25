@@ -1,5 +1,4 @@
 name: Hello workflow
-
 on:
   push:
     branches:
@@ -43,6 +42,10 @@ jobs:
           git --version
           cd /tmp
           git clone --branch main https://${{secrets.USERNAME}}:${{secrets.LOGIN}}@github.com/Sandipangh86/AMI-creation.git
+      - name:  build
+        run: |
+          packer build -var-file="/tmp/AMI-creation/var.pkrvars.hcl" RHEL.pkr.hcl
+
   #goodbye:
    #  runs-on: ubuntu-latest
     # steps:

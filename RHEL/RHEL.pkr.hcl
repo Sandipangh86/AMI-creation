@@ -18,7 +18,7 @@ ssh_username            =   "ec2-user"
 ssh_interface           =   "session_manager"
 session_manager_port    =   1600
 communicator            =   "ssh"
-ssh_timeout             =   "10m"
+ssh_timeout             =   "15m"
 user_data_file          =   "user_data.sh"
 }
 
