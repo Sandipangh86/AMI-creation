@@ -33,7 +33,7 @@ jobs:
           sudo dpkg -i session-manager-plugin.deb
       - name: Install packer plugin
         run:  |
-          packer plugins install github.com/hasicrop/amazon
+          packer plugins install github.com/hashicorp/amazon
       - name: Github configuration
         run:  |
           git --version
