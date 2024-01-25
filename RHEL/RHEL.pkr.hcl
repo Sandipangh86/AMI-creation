@@ -24,7 +24,7 @@ user_data_file          =   "user_data.sh"
 
 build {
     name    =   "Sandipan-AMI"
-    source  =   [
+    sources  =   [
         "source.amazon-ebs.rhel"
     ]
 provisioner "shell" {
