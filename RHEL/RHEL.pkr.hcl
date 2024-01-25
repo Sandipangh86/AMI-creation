@@ -18,15 +18,15 @@ ssh_username            =   "ec2-user"
 ssh_interface           =   "session_manager"
 session_manager_port    =   1600
 communicator            =   "ssh"
-ssh_timeout             =   "15m"
+ssh_timeout             =   "10m"
 user_data_file          =   "user_data.sh"
 }
 
 build {
     name    =   "Sandipan-AMI"
-    source  =   ["source.amazon-ebs.rhel"]
-
-
+    source  =   [
+        "source.amazon-ebs.rhel"
+    ]
 provisioner "shell" {
     inline = [
         "sudo useradd ssm-user",
