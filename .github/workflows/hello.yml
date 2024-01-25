@@ -14,8 +14,8 @@ jobs:
   hello:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: hello world
+      - name: Hello World
+        uses: actions/checkout@v3
         run: echo "Hello World"
         shell: bash
       - name: configure aws credentials
@@ -31,10 +31,12 @@ jobs:
         run:  |
           curl "https://s3.amazonaws.com/session-manager-downloads/plugin/latest/ubuntu_64bit/session-manager-plugin.deb" -o "session-manager-plugin.deb"
           sudo dpkg -i session-manager-plugin.deb
-          session-manager-plugin --version
       - name: Install packer plugin
         run:  |
           packer plugins install github.com/hasicrop/amazon
+      - name: Github configuration
+        run:  |
+          git --version
   #goodbye:
    #  runs-on: ubuntu-latest
     # steps:
