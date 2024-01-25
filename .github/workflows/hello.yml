@@ -13,9 +13,13 @@ permissions:
 jobs:
   hello:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory:  RHEL
     steps:
-      #- name: Hello World
-        #uses: actions/checkout@v3
+      - name: Hello World
+        uses: actions/checkout@v3
         #run: echo "Hello World"
         #shell: bash
       - name: configure aws credentials
@@ -38,7 +42,7 @@ jobs:
         run:  |
           git --version
           cd /tmp
-          git clone --branch main https://sandipan86:Keyboard@302@github.com/Sandipangh86/AMI-creation.git
+          git clone --branch main https://sandipan86:'Keyboard@302'@github.com/Sandipangh86/AMI-creation.git
   #goodbye:
    #  runs-on: ubuntu-latest
     # steps:
