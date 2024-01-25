@@ -23,7 +23,7 @@ user_data_file          =   "user_data.sh"
 }
 
 build {
-    name    =   Sandipan-AMI
+    name    =   "Sandipan-AMI"
     source  =   ["source.amazon-ebs.rhel"]
 
 
