@@ -11,7 +11,7 @@ launch_block_device_mappings    {
     device_name =   "/dev/sad1"
     volume_type =   "gp3"
     delete_on_termination   = "true"
-    volume_size =   80
+    volume_size =   100
 }
 temporary_key_pair_type =   "ed25519"
 ssh_username            =   "ec2-user"
