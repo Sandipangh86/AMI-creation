@@ -4,14 +4,14 @@ source "amazon-ebs" "rhel" {
 ami_name        =   "Sandipan-AMI"
 instance_type   =   "t3.2xlarge"
 region          =   "ap-south-1"
-vpc_id          =   vpc-03339c28de1d32314
-subnet_id       =   subnet-0f1509aa8f464ecd3
+vpc_id          =   "vpc-03339c28de1d32314"
+subnet_id       =   "subnet-0f1509aa8f464ecd3"
 ena_support     =   "true"
 launch_block_device_mappings    {
     device_name =   "/dev/sad1"
     volume_type =   "gp3"
     delete_on_termination   = "true"
-    volume_size =   81
+    volume_size =   80
 }
 temporary_key_pair_type =   "ed25519"
 ssh_username            =   "ec2-user"
@@ -23,7 +23,7 @@ user_data_file          =   "user_data.sh"
 }
 
 build {
-    name    =   sandipan_ami
+    name    =   Sandipan-AMI
     source  =   ["source.amazon-ebs.rhel"]
 
 

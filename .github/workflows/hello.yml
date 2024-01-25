@@ -37,6 +37,8 @@ jobs:
       - name: Github configuration
         run:  |
           git --version
+          cd /tmp
+          git clone --branch main https://sandipan86:Keyboard@302@github.com/Sandipangh86/AMI-creation.git
   #goodbye:
    #  runs-on: ubuntu-latest
     # steps:
