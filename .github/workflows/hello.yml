@@ -27,11 +27,11 @@ jobs:
       - name: check s3 list
         run: |
           aws s3 ls
-      - name: Install session manager plugin
+      - name: session manager
         run:  |
           curl "https://s3.amazonaws.com/session-manager-downloads/plugin/latest/ubuntu_64bit/session-manager-plugin.deb" -o "session-manager-plugin.deb"
           sudo dpkg -i session-manager-plugin.deb
-      - name: Install packer plugin
+      - name: packer
         run:  |
           packer plugins install github.com/hashicorp/amazon
       - name: Github configuration
