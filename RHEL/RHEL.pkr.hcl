@@ -5,7 +5,6 @@ source "amazon-ebs" "rhel" {
         root_device_type    =   "ebs"
         virtulization_type  =   "hvm"
         architecture    =   x86_64
-        usages  =   RunInstances:0010
     }
 
 ami_name        =   "Sandipan-AMI"
