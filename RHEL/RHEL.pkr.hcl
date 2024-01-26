@@ -1,5 +1,5 @@
 source "amazon-ebs" "hello-ec2" {
-    region  =   "ap-south-1"
+    #region  =   "ap-south-1"
     source_ami_filter {
         filters =   {
             virtulization_type  =   "hvm"
