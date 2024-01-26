@@ -23,8 +23,9 @@ launch_block_device_mappings    {
     delete_on_termination   = "true"
     volume_size =   80
 }
-temporary_key_pair_type =   "ed25519"
+temporary_key_pair_type     = "ed25519"
 ssh_username            =   "ec2-user"
+associate_public_ip_address = true
 ssh_interface           =   "session_manager"
 session_manager_port    =   1600
 communicator            =   "ssh"
