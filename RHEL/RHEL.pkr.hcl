@@ -1,5 +1,5 @@
 source "amazon-ebs" "rhel" {
-    ami_id = var.ami_id
+    source_ami_id = var.ami_id
 
 ami_name        =   "Sandipan-AMI"
 instance_type   =   "t3.2xlarge"
