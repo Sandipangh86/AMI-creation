@@ -1,13 +1,16 @@
-source "amazon-ebs" "rhel" {
-    source_ami_filter [
-        most_recent =   true
-        owners      =   "309956199498"
-        root_device_type    =   "ebs"
-        virtulization_type  =   "hvm"
-        architecture    =   x86_64
-    ]
+source "amazon-ebs" "hello-ec2" {
+    region  =   "ap-south-1"
+    source_ami_filter {
+        filters =   {
+            virtulization_type  =   "hvm"
+            root_device_type    =   "ebs"
+            name    =   "RHEL-8.6.0*"
+        }
+        owners  =   ["309956199498"]
+        most_recent =   "true"
+    }
 
-ami_name        =   "Sandipan-AMI"
+ami_name        =   "sandipan-packer_AWS {{timestamp}}"
 instance_type   =   "t3.2xlarge"
 region          =   "ap-south-1"
 vpc_id          =   "vpc-03339c28de1d32314"
@@ -29,9 +32,8 @@ user_data_file          =   "user_data.sh"
 }
 
 build {
-    name    =   "Sandipan-AMI"
     sources  =   [
-        "source.amazon-ebs.rhel"
+        "source.amazon-ebs.hello-ec2"
     ]
 provisioner "shell" {
     inline = [
