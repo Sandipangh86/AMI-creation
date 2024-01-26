@@ -18,7 +18,7 @@ vpc_id          =   "vpc-03339c28de1d32314"
 subnet_id       =   "subnet-0f1509aa8f464ecd3"
 ena_support     =   "true"
 launch_block_device_mappings    {
-    device_name =   "/dev/sad1"
+    device_name =   "/dev/sda1"
     volume_type =   "gp3"
     delete_on_termination   = "true"
     volume_size =   80
