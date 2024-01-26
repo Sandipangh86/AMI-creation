@@ -2,7 +2,7 @@ source "amazon-ebs" "hello-ec2" {
     region =  "ap-south-1"
     source_ami_filter {
         filters =   {
-            virtulization-type  =   "hvm"
+            virtualization-type =   "hvm"
             root-device-type    =   "ebs"
             name    =   "RHEL-8.6.0*"
         }
