@@ -12,7 +12,7 @@ source "amazon-ebs" "hello-ec2" {
 
 ami_name        =   "sandipan-packer_AWS {{timestamp}}"
 instance_type   =   "t3.2xlarge"
-region          =   "ap-south-1"
+#region          =   "ap-south-1"
 vpc_id          =   "vpc-03339c28de1d32314"
 subnet_id       =   "subnet-0f1509aa8f464ecd3"
 ena_support     =   "true"
