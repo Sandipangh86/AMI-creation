@@ -3,7 +3,7 @@ source "amazon-ebs" "hello-ec2" {
     source_ami_filter {
         filters =   {
             virtulization_type  =   "hvm"
-            root_device_type    =   "ebs"
+            root-device-type    =   "ebs"
             name    =   "RHEL-8.6.0*"
         }
         owners  =   ["309956199498"]
