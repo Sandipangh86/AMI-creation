@@ -1,5 +1,12 @@
 source "amazon-ebs" "rhel" {
-    source_ami_id = var.ami_id
+    source_ami_filter {
+        most_recent =   true
+        owners      =   ["309956199498"]
+        root_device_type    =   "ebs"
+        virtulization_type  =   "hvm"
+        architecture    =   x86_64
+        usages  =   RunInstances:0010
+    }
 
 ami_name        =   "Sandipan-AMI"
 instance_type   =   "t3.2xlarge"
