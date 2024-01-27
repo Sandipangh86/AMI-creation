@@ -39,7 +39,7 @@ build {
     ]
 provisioner "shell" {
     inline = [
-        "sudo useradd ssm-user",
+        #"sudo useradd ssm-user",
         "sudo echo 'ssm-user    ALL=(ALL)   NOPASSWD:ALL'   >   /etc/sudoers.d/ssm-agent-users",
         "sudo chmod 440 /etc/sudoers.d/ssm-agent-users",
         "sudo yum install dialog -y"
