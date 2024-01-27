@@ -29,7 +29,7 @@ associate_public_ip_address = true
 ssh_interface           =   "session_manager"
 session_manager_port    =   1600
 communicator            =   "ssh"
-ssh_timeout             =   "10m"
+ssh_timeout             =   "2m"
 user_data_file          =   "user_data.sh"
 }
 

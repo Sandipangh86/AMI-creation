@@ -1,3 +1,4 @@
+#!/bin/bash
 sudo yum install -y https://s3.amazonaws.com/session-manager-downloads/plugin/latest/linux_64bit/session-manager-plugin.rpm
 sudo systemctl restart amazon-ssm-agent
 sudo systemctl status amazon-ssm-agent
