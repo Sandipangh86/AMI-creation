@@ -4,7 +4,7 @@ source "amazon-ebs" "hello-ec2" {
         filters =   {
             virtualization-type =   "hvm"
             root-device-type    =   "ebs"
-            name    =   "RHEL-8.6.0*"
+            name    =   "RHEL-8.10*"
         }
         owners  =   ["309956199498"]
         most_recent =   "true"
